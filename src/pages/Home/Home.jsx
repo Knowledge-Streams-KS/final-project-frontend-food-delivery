@@ -6,13 +6,13 @@ import FoodDisplay from "../../components/FoodDisplay/FoodDisplay";
 import AppDownload from "../../components/AppDownload.jsx/AppDownload";
 
 const Home = () => {
-  const [category, setCategory] = useState("ALL");
+  const [category, setCategory] = useState("All");
   return (
     <div>
       <Header />
       <ExploreMenu category={category} setCategory={setCategory} />
       <FoodDisplay category={category} />
-      <AppDownload/>
+      <AppDownload />
     </div>
   );
 };

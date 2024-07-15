@@ -7,44 +7,43 @@ import { StoreContext } from "../../context/StoreContext";
 // destructuring setshowlogin
 
 const Navbar = ({ setShowLogin }) => {
-
-
   // creating states variable for underline
 
   const [menu, setMenu] = useState("menu");
-  const {getTotalCartAmount} = useContext(StoreContext)
+  const { getTotalCartAmount } = useContext(StoreContext);
   return (
     <div className="navbar">
-      <Link to='/'> 
-      <img src={assets.logo} alt="" className="logo" /></Link>
+      <Link to="/">
+        <img src={assets.logo} alt="" className="logo" />
+      </Link>
       <ul className="navbar-menu">
         <Link
           to="/"
           onClick={() => setMenu("home")}
           className={menu === "home" ? "active" : ""}
         >
-          home
+          Home
         </Link>
         <a
           href="#explore-menu"
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? "active" : ""}
         >
-          menu
+          Menu
         </a>
         <a
           href="#app-download"
           onClick={() => setMenu("mobile-app")}
           className={menu === "mobile-app" ? "active" : ""}
         >
-          mobile-app
+          Mobile-App
         </a>
         <a
           href="#footer"
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
-          contact us
+          Contact Us
         </a>
       </ul>
       <div className="navbar-right">
@@ -53,7 +52,7 @@ const Navbar = ({ setShowLogin }) => {
           <Link to="/cart">
             <img src={assets.basket_icon} alt="" />
           </Link>
-          <div className={getTotalCartAmount()===0?"":"dot"}> </div>
+          <div className={getTotalCartAmount() === 0 ? "" : "dot"}> </div>
         </div>
         <button onClick={() => setShowLogin(true)}>sign in</button>
       </div>
