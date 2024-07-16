@@ -7,6 +7,7 @@ import "./Add.css"
 const Add = () => {
   const url = "http://localhost:3000"
   const [image, setImage] = useState(false)
+  
   const [data, setData] = useState({
     name: "",
     description: "",
